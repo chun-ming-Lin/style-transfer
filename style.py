@@ -22,7 +22,7 @@ style_reference_image_path = keras.utils.get_file(
 )
 
 # 產生檔案的字首
-result_prefix = 'me'
+result_prefix = '101'
 
 # weight of the different components 
 total_variation_weight = 1e-6
@@ -175,5 +175,5 @@ for i in range(1, iterations + 1):
     if i % 200 == 0:
         print('Interation %d: loss=%.2f' % (i, loss))
         img = deprocedd_img(combination_image.numpy())
-        fname = result_prefix + '_at_interation_%d.png' % i
+        fname = result_prefix + '_at_iteration_%d.png' % i
         keras.preprocessing.image.save_img(fname, img)
